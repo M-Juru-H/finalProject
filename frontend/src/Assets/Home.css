@@ -1,0 +1,191 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  background-image:
+    linear-gradient(to bottom, rgba(9, 242, 56, 0.5), rgba(0, 0, 0, 0.8)),
+    url('./88.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+/* Content Layout */
+.content {
+  flex: 1; /* Allow content to grow and push footer down */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 25px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+header h1 {
+  font-size: 2.8em;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #00e6ac;
+  transform: scale(1.1);
+}
+
+.hero {
+  width: 100%;
+  max-width: 850px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  text-align: center;
+  margin-top: 40px;
+  color: #fff;
+}
+
+.hero h2 {
+  margin-bottom: 25px;
+  font-size: 2.4em;
+  font-weight: 600;
+  color: #00e6ac;
+}
+
+.hero p {
+  margin-bottom: 25px;
+  font-size: 1.2em;
+  line-height: 1.8em;
+}
+
+.hero .btn {
+  display: inline-block;
+  background: linear-gradient(to right, #007bff, #00e6ac);
+  color: #fff;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero .btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.charts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.charts > div {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+}
+
+footer {
+  flex-shrink: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #ccc;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.95em;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+/* Hover Effects */
+footer:hover {
+  background-color: rgba(0, 0, 0, 1);
+  color: #fff;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .hero {
+    padding: 30px;
+    margin-top: 20px;
+  }
+
+  .charts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .charts > div {
+    width: 90%;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  nav a {
+    font-size: 1em;
+  }
+}

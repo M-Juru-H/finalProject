@@ -1,0 +1,34 @@
+h1 {
+    color: #333;
+    text-align: center;
+  }
+
+ .input-group1 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0; 
+  }
+  
+  table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 80%;
+    background: white;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background: #28a745;
+    color: white;
+  }
+  
+  .pagination button {
+    margin: 5px;
+  }
+  
